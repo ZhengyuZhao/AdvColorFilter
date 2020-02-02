@@ -1,3 +1,8 @@
+import torch
+import torch.nn as nn
+import csv
+
+
 #image quantization
 def quantization(x):
    x_quan=torch.round(x*255)/255 
