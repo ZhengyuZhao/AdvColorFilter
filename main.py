@@ -29,7 +29,7 @@ args = parser.parse_args()
 batch_size=args.batch_size_ori
 max_iterations=args.max_iterations
 lr=args.lr
-search_steps=agrs.search_steps
+search_steps=args.search_steps
 pieces=args.pieces
 initial_lambda=args.initial_lambda
 
