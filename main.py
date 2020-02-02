@@ -13,8 +13,11 @@ from PIL import Image
 import numpy as np
 import time
 import os
+from tqdm import tqdm
 import argparse
 import AdvCF
+from utils import *
+
 
 parser = argparse.ArgumentParser(description = "main")
 parser.add_argument("-batch_size", "--batch_size_ori", type=int, help="Number of images processed at one time", default=25)
@@ -32,7 +35,10 @@ lr=args.lr
 search_steps=args.search_steps
 pieces=args.pieces
 initial_lambda=args.initial_lambda
-
+if  args.gpu==1:   
+    device  = torch.device("cuda:0")
+if  args.gpu==-1:
+    device  = torch.device("cpu")
 #initialization
 trn = transforms.Compose([
      transforms.ToTensor(),])
@@ -49,14 +55,14 @@ output_path='./AdvCF_CW_piece_'+str(pieces)+'_lr_'+str(lr)+'_iter_'+str(max_iter
 if not os.path.exists(output_path):
     os.makedirs(output_path)
 num_batches = np.int(np.ceil(len(image_id_list)/batch_size))
-for k in tqdm_notebook(range(0,1)):
+for k in tqdm(range(0, num_batches),desc="Gen_adv"):
     batch_size_cur=min(batch_size,len(image_id_list)-k*batch_size)    
     X_ori = torch.zeros(batch_size_cur,3,299,299).to(device)
     for i in range(batch_size_cur):  
         X_ori[i]=trn(Image.open('./images/'+image_id_list[k*batch_size+i]+'.png')).unsqueeze(0)  
     labels=torch.argmax(model((X_ori-0.5)/0.5),dim=1)
     #genrate the adversarial images
-    approach = AdvCF(device=device,max_iterations=max_iterations,learning_rate=lr,search_steps=search_steps,initial_const=initial_lambda)
+    approach = AdvCF.AdvCF(device=device,max_iterations=max_iterations,learning_rate=lr,search_steps=search_steps,initial_const=initial_lambda)
     X_adv,o_best_l2= approach.adversary(model, X_ori, labels=labels, pieces=pieces, targeted=False)
 
     #save the successfully adversarial images
