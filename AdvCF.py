@@ -14,7 +14,7 @@ import torchvision
 from torchvision import datasets, models, transforms
 from PIL import Image
 import os
-import utils
+from utils import *
 
 
 class AdvCF:
@@ -35,6 +35,9 @@ class AdvCF:
         Initial constant of the adversary.
     device : torch.device, optional
         Device to use for the adversary.
+    pieces : int
+        the number of pieces in the piecewise-linear color filter
+    
     """
 
     def __init__(self,
@@ -109,7 +112,7 @@ class AdvCF:
             Batch of image examples.
         labels : torch.Tensor
             Original labels if untargeted, else labels of targets.
-        pieces :the number of pieces in the piecewise-linear function    
+        pieces :the number of pieces in the piecewise-linear color filter    
         targeted : bool, optional
             Whether to perform a targeted adversary or not.
 
@@ -137,7 +140,7 @@ class AdvCF:
         for outer_step in range(self.binary_search_steps):
 
             # setup the optimizer
-            Paras=torch.ones(batch_size_cur,3,pieces).to(device)*1/pieces
+            Paras=torch.ones(batch_size,3,pieces).to(self.device)*1/pieces
             Paras.requires_grad=True            
             optimizer = optim.Adam([Paras], lr=self.learning_rate, betas=(0.9, 0.999), eps=1e-8)
             best_l2 = torch.full((batch_size,), 1e10, device=self.device)
@@ -150,7 +153,7 @@ class AdvCF:
             prev = float('inf')
             for iteration in range(self.max_iterations):
                 # perform the adversary
-                adv, l2, loss = self._step(model, optimizer, inputs, Paras, steps, labels, labels_infhot, targeted, CONST)
+                adv, l2, loss = self._step(model, optimizer, inputs, Paras, pieces, labels, labels_infhot, targeted, CONST)
 
                 # check if we should abort search if we're getting nowhere.
                 if self.abort_early and iteration % (self.max_iterations // 20) == 0:
