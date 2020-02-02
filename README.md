@@ -4,7 +4,7 @@ PyTorch code for our arXiv article:
 [**A Differentiable Color Filter for Generating Unrestricted Adversarial Images**](https://arxiv.org/abs/1911.02466)
 
 We propose Adversarial Color Filtering (AdvCF), an approach that uses a differentiable color filter to create adversarial images.
-This paper validate two properties of the resulting adversarial images: 1) the photographic quality and appeal of them are maintained or enhanced, even with large perturbations introduced. 2) Higher transferabibility than conventional L<sub>p</sub> approaches. We also points out that AdvCF could be further improved if image semantics are taken into account.
+This paper validates two properties of the resulting adversarial images: 1) the photographic quality and appeal of them are maintained or enhanced, even with large perturbations introduced. 2) Higher transferability than conventional L<sub>p</sub> approaches. We also point out that AdvCF could be further improved if image semantics are taken into account.
 
 ## Implementation
  
