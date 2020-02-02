@@ -10,7 +10,6 @@ import torchvision
 from torchvision import datasets, models, transforms
 import matplotlib.pyplot as plt
 from PIL import Image
-import csv
 import numpy as np
 import time
 import os
