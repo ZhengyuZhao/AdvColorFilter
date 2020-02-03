@@ -61,7 +61,8 @@ for k in tqdm(range(0, num_batches),desc="Gen_adv"):
     for i in range(batch_size_cur):  
         X_ori[i]=trn(Image.open('./images/'+image_id_list[k*batch_size+i]+'.png')).unsqueeze(0)  
     labels=torch.argmax(model((X_ori-0.5)/0.5),dim=1)
-    #genrate the adversarial images
+    
+    #Apply our AdvCF to genrate the adversarial images
     approach = AdvCF.AdvCF(device=device,max_iterations=max_iterations,learning_rate=lr,search_steps=search_steps,initial_const=initial_lambda)
     X_adv,o_best_l2= approach.adversary(model, X_ori, labels=labels, pieces=pieces, targeted=False)
 
