@@ -19,7 +19,7 @@ Run [this official script](https://github.com/tensorflow/cleverhans/blob/master/
 python main.py -batch_size 25 -gpu 1 -max_iterations 500 -learning_rate 0.01 -pieces 64 -search_steps 1 -initial_lambda 5
 ```
 
-### Examples
+### Examples for two tasks (ImageNet classification and Places scene recognition)
 
 <p align="center">
   <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_1.PNG" width='1000'>
