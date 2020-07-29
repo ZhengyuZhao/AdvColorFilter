@@ -1,5 +1,5 @@
 # ACE
-PyTorch code for our arXiv article:
+PyTorch code for our BMVC 2020 paper:
 
 [**Adversarial Color Enhancement: Generating Unrestricted Adversarial Images by Optimizing a Color Filter**](https://arxiv.org/abs/2002.01008)
 
