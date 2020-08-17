@@ -25,9 +25,9 @@ python main.py -batch_size 25 -gpu 1 -max_iterations 500 -learning_rate 0.01 -pi
 ### Examples for two tasks (ImageNet classification and Places scene recognition)
 
 <p align="center">
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_1.PNG" width='1000'>
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_2.PNG" width='1000'>
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_3.PNG" width='1000'>
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_4.PNG" width='1000'alt>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_1.PNG" width='800'>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_2.PNG" width='800'>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_3.PNG" width='800'>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_4.PNG" width='800'alt>
 <!--   <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/ex_7.JPG" width='1000'alt> -->
 
