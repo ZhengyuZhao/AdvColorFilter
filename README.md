@@ -6,7 +6,7 @@ Zhengyu Zhao, Zhuoran Liu, Martha Larson, [**"Adversarial Color Enhancement: Gen
   <img src="https://github.com/ZhengyuZhao/ACE/blob/master/figure/figure1.PNG" width='600'>
 </p>
 
-We propose Adversarial Color Enhancement (ACE), an approach that uses a differentiable color filter to create unrestricted adversarial images. This paper validates two properties of the resulting adversarial images: 1) maintained or enhanced **photographic quality and appeal**, even with large perturbations introduced. 2) Higher **transferability** than conventional L<sub>p</sub> and other unrestricted approaches. We also present two potential ways to improve ACE in terms of image quality by guiding it with specific attractive image styles or adapting it toregional semantics.
+We propose Adversarial Color Enhancement (ACE), an approach that uses a differentiable color filter to create unrestricted adversarial images. This paper validates two properties of the resulting adversarial images: 1) maintained or enhanced **photographic quality and appeal**, even with large perturbations introduced. 2) Higher **transferability** than conventional L<sub>p</sub> and other unrestricted approaches. We also present two potential ways to improve ACE in terms of image quality by guiding it with specific attractive image styles or adapting it to regional semantics.
 
 ## Implementation
  
