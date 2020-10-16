@@ -5,8 +5,8 @@ Zhengyu Zhao, Zhuoran Liu, Martha Larson, [**"Adversarial Color Enhancement: Gen
 <p align="center">
   <img src="https://github.com/ZhengyuZhao/ACE/blob/master/BMVC_version/Figures/figure1.PNG" width='600'>
 </p>
-Deep computer vision models are susceptible to adversarial perturbations.
-We propose Adversarial Color Enhancement (ACE), a novel approach to generating non-suspicious adversarial images by optimizing color transformation within a parametric filter space. Because filters modify similar colors in similar ways, ACE inherently obviates the need for additional constraints. We investigate a general formulation of ACE and also a variant targeting a particular color style, i.e., that steers an image towards a specific, popular image color filter. We carry out a robustness analysis from both the attack and defense perspectives by adjusting the bounds of the color filter parameters. From the attack perspective, we provide extensive experiments on the vulnerability of image classifiers, but also explore the vulnerability of segmentation and aesthetics quality assessment algorithms. From the defense perspective, more experiments provide insight into the stability of ACE against input transformation-based defenses and show the potential of adversarial training for improving model robustness against ACE.
+
+We propose Adversarial Color Enhancement (ACE), an approach that uses a differentiable color filter to create unrestricted adversarial images. This paper validates two properties of the resulting adversarial images: 1) maintained or enhanced **photographic quality and appeal**, even with large perturbations introduced. 2) Higher **transferability** than conventional L<sub>p</sub> and other unrestricted approaches. We also present two potential ways to improve ACE in terms of image quality by guiding it with specific attractive image styles or adapting it to regional semantics.
 
 ## Implementation
  
