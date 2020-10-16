@@ -3,7 +3,7 @@ PyTorch code for our paper:
 
 Zhengyu Zhao, Zhuoran Liu, Martha Larson, [**"Adversarial Color Enhancement: Generating Unrestricted Adversarial Images by Optimizing a Color Filter"**](https://arxiv.org/abs/2002.01008), BMVC 2020.
 <p align="center">
-  <img src="https://github.com/ZhengyuZhao/ACE/blob/master/figure/figure1.PNG" width='600'>
+  <img src="https://github.com/ZhengyuZhao/ACE/blob/master/BMVC_version/Figures/figure1.PNG" width='600'>
 </p>
 
 We propose Adversarial Color Enhancement (ACE), an approach that uses a differentiable color filter to create unrestricted adversarial images. This paper validates two properties of the resulting adversarial images: 1) maintained or enhanced **photographic quality and appeal**, even with large perturbations introduced. 2) Higher **transferability** than conventional L<sub>p</sub> and other unrestricted approaches. We also present two potential ways to improve ACE in terms of image quality by guiding it with specific attractive image styles or adapting it to regional semantics.
@@ -25,9 +25,9 @@ python main.py -batch_size 25 -gpu 1 -max_iterations 500 -learning_rate 0.01 -pi
 ### Examples for two tasks (ImageNet classification and Places scene recognition)
 
 <p align="center">
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_1.PNG" width='800'>
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_2.PNG" width='800'>
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_3.PNG" width='800'>
-  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/add_4.PNG" width='800'alt>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/BMVC_version/Figures/add_1.PNG" width='800'>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/BMVC_version/Figures/add_2.PNG" width='800'>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/BMVC_version/Figures/add_3.PNG" width='800'>
+  <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/BMVC_version/Figures/add_4.PNG" width='800'alt>
 <!--   <img src="https://github.com/ZhengyuZhao/AdvCF/blob/master/figure/ex_7.JPG" width='1000'alt> -->
 
