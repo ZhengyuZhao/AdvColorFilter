@@ -2,7 +2,7 @@
 PyTorch code for our paper:
 
 Zhengyu Zhao, Zhuoran Liu, Martha Larson, [**"Adversarial Robustness Against Image Color Transformation within Parametric Filter Space
-"**](), submitted to IEEE TPAMI.
+"**](), under review.
 <p align="center">
   <img src="https://github.com/ZhengyuZhao/ACE/blob/master/Journal_version/Figures/illustration.PNG" width='800'>
 </p>
@@ -14,7 +14,7 @@ We propose Adversarial Color Enhancement (ACE), a novel approach to generating n
 ### Overview
 
 This code contains the implementations of:
- 1. The proposed ACE-PGD on attacking ImageNet classifiers in ```ACE.ipynb```,
+ 1. The proposed ACE on attacking ImageNet classifiers in ```ACE.ipynb```,
  2. The adversarial training against ACE on CIFAR-10 in the subfolder ```AdvTrain_ACE```.
  
 ### Requirements
