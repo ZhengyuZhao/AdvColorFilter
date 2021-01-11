@@ -12,9 +12,6 @@ We propose Adversarial Color Enhancement (ACE), an approach that uses a differen
  
 ### Requirements
 torch>=1.3.1; torchvision>=0.4.2; scipy=1.3.x (**Important!** The 1.4.x releases of scipy have resulted in greater than 100x slow-down of "stats.truncnorm.rvs" relative to the 1.3.x versions when loading Inception-V3 model in PyTorch.)
-### Download data
-
-Run [this official script](https://github.com/tensorflow/cleverhans/blob/master/examples/nips17_adversarial_competition/dataset/download_images.py) to download the dataset.
 
 ### Generating adversarial examples with ACE
 
