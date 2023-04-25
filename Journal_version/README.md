@@ -2,7 +2,7 @@
 PyTorch code for our paper:
 
 Zhengyu Zhao, Zhuoran Liu, Martha Larson, [**"Adversarial Robustness Against Image Color Transformation within Parametric Filter Space
-"**](https://arxiv.org/abs/2011.06690), under review.
+"**](https://arxiv.org/abs/2011.06690), IEEE Transactions on Information Forensics and Security (TIFS), 2023.
 <p align="center">
   <img src="https://github.com/ZhengyuZhao/ACE/blob/master/Journal_version/Figures/illustration.PNG" width='800'>
 </p>
