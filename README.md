@@ -1,5 +1,5 @@
 # Adversarial Color Filter (AdvCF)
-Please find the preliminary version published at BMVC 2020 in the folder ```BMVC_version```, and its extended journal version in ```Journal_version```.
+Please find the preliminary version, published at BMVC 2020, in the folder ```BMVC_version```, and its extended journal version, published at IEEE TIFS, in ```Journal_version```.
 
 
  
